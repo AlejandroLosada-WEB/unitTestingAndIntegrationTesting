@@ -36,14 +36,5 @@ describe('AppComponent', () => {
     expect(elem).not.toBeNull();
   });
  
-  it('Debe ir a la página de médicos', () => {
-    const elems = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref))
-    let exists = false;
-    for (const elem of elems)
-      if(elem.attributes['routerLink']=='/medicos'){exists=true;break;}
-       
-      
-    expect(exists).toBeTruthy();
-  });
- 
+  
 });
