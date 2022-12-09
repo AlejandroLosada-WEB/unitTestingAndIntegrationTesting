@@ -15,7 +15,7 @@ import { MedicosService } from './medicos.service';
 export class MedicosComponent implements OnInit {
 
   public medicos: any[] = [];
-  public mensajeError: string="";
+  public mensajeError="";
 
   constructor( public _medicoService: MedicosService ) { }
 
