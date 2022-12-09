@@ -40,7 +40,8 @@ describe('AppComponent', () => {
     const elems = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref))
     let exists = false;
     for (const elem of elems)
-       exists=(elem.attributes['routerLink']=='/medicos')?  true : false;
+      if(elem.attributes['routerLink']=='/medicos'){exists=true;break;}
+       
       
     expect(exists).toBeTruthy();
   });
