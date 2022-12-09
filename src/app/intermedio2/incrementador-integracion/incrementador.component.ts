@@ -1,4 +1,4 @@
-import { Component, Input, Output, ViewChild, OnInit, EventEmitter, ElementRef } from '@angular/core';
+import { Component, Input, Output, ViewChild, EventEmitter, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -8,20 +8,15 @@ import { FormsModule } from '@angular/forms';
   styles: [],
   imports:[FormsModule]
 })
-export class IncrementadorComponent implements OnInit {
+export class IncrementadorComponent {
 
   @ViewChild('txtProgress') txtProgress!: ElementRef;
 
-  // tslint:disable-next-line:no-input-rename
-  @Input('nombre') leyenda: string = 'Leyenda';
-  @Input() progreso: number = 50;
+  @Input() leyenda = 'Leyenda';
+  @Input() progreso = 50;
 
-  // tslint:disable-next-line:no-output-rename
-  @Output('actualizaValor') cambioValor: EventEmitter<number> = new EventEmitter();
+  @Output() cambioValor: EventEmitter<number> = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() { }
 
   onChanges( newValue: number ) {
 
