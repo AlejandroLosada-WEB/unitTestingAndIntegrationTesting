@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { MedicosService } from './intermedio/espias/medicos.service';
 
 @Component({
   selector: 'app-root',
